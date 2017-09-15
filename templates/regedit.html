@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>用户注册</h1>
+        <form action="/regedit/" method="post">
+            {% csrf_token %}
+            {% if msg_1 %}
+                <a>{{ msg_1 }}</a><br/>
+            {% endif %}
+            <a>用户名:</a>
+            <input type="text" required="required" placeholder="用户名" name="username"></input><br/>
+            <a>密    码:</a>
+            <input type="password" required="required" placeholder="密码" name="password"></input><br/>
+            {% csrf_token %}
+            {% if msg_2 %}
+                <a>{{ msg_2 }}</a><br/>
+            {% endif %}
+            <a>姓    名:</a>
+            <input type="text" required="required" placeholder="姓名" name="name"></input><br/>
+            <a>年    龄:</a>
+            <input type="text" required="required" placeholder="年龄" name="age"></input><br/>
+            <a>性    别:</a>
+            <input type="text" required="required" placeholder="性别" name="sex"></input><br/>
+            <button class="but" type="submit">注册</button><br/>
+        </form>
+</body>
+</html>

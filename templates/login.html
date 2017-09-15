@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/css/Login.css"/>
+</head>
+<body>
+    <div id="login">
+        <h1>Login</h1>
+        <form action="/login/" method="post">
+            {% csrf_token %}
+            <input type="text" required="required" placeholder="用户名" name="username"></input>
+            <input type="password" required="required" placeholder="密码" name="password"></input>
+            <button class="but" type="submit">登录</button>
+        </form>
+        <a href="/regedit/" style="font-size: 20px;color: red">注册</a>
+    </div>
+</body>
+</html>

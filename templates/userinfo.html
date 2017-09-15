@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+{% block xx %}
+    <h3>用户名:{{ user.username }}</h3><br/>
+    <h3>
+    {% if user.BOY_id == null %}
+    姓名:{{ user.GIRL.name }}<br/>性别:女
+    {% else %}
+    姓名:{{ user.BOY.name }}<br/>性别:男
+    {% endif %}
+    </h3><br/>
+    <h3>请选择您要进行约会的对象:</h3><br/>
+    <ul class="pagination">
+          <li><a href="/boy_list/">男生</a></li>
+          <li><a href="/girl_list/">女生</a></li>
+    </ul>
+    <br/><br/>
+    <a href="/login/">返回登录界面</a></li>
+
+{% endblock %}
